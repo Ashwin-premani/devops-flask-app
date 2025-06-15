@@ -34,22 +34,24 @@ docker build -t flask-app .
 You can now access the app locally by navigating to http://localhost:5000 in your browser.
 
 ☁️ AWS EC2 Deployment Instructions
-Prerequisites
-AWS account with access to EC2
+🔧 Prerequisites
+An AWS account with EC2 access
 
-EC2 instance (Ubuntu 22.04, t2.micro) created
+A running EC2 instance (Ubuntu 22.04 LTS, t2.micro)
 
-Security group with port 80 open for HTTP traffic
+Security group configured to allow port 80 (HTTP) traffic
 
-EC2 Setup
-SSH into your EC2 instance using the .pem key file you downloaded when creating the EC2 instance.
+🖥️ EC2 Setup Instructions
+1. SSH into your EC2 instance
+Use the .pem key downloaded when you launched the instance:
 
 bash
 Copy
 Edit
-chmod 400 <your-key.pem>
-ssh -i <your-key.pem> ubuntu@<your-ec2-public-ip>
-Install Docker and Git on your EC2 instance:
+chmod 400 your-key.pem
+ssh -i your-key.pem ubuntu@<your-ec2-public-ip>
+2. Install Docker and Git
+Run the following commands on your EC2 instance:
 
 bash
 Copy
@@ -59,30 +61,30 @@ sudo apt install -y docker.io git
 sudo systemctl start docker
 sudo usermod -aG docker ubuntu
 newgrp docker
-Clone your GitHub repo with the project code:
+3. Clone your GitHub repository
+Clone your project code from GitHub:
 
 bash
 Copy
 Edit
 git clone https://github.com/Ashwin-premani/devops-flask-app.git
 cd devops-flask-app
-Build the Docker image on EC2:
-
+4. Build the Docker image
 bash
 Copy
 Edit
 docker build -t flask-app .
-Run the Docker container on port 80:
-
+5. Run the Docker container on port 80
 bash
 Copy
 Edit
 docker run -d -p 80:80 flask-app
-Accessing the App
-Once the container is running, navigate to the public IP address of your EC2 instance in a web browser:
+🌍 Access the App
+Once the container is running, open your browser and go to:
 
 cpp
 Copy
 Edit
 http://<your-ec2-public-ip>
-Your Flask app should now be live on the internet! 🎉
+✅ Your Flask app should now be live on the internet! 🎉
+
