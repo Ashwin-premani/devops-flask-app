@@ -22,3 +22,11 @@ devops-flask-app/
 └── Dockerfile
 
 
+
+---
+
+## 🧪 Local Docker Instructions
+
+### Build the image:
+```bash
+docker build -t flask-app .
