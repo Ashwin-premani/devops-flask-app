@@ -15,3 +15,10 @@ This project demonstrates containerizing a simple Python Flask web app using Doc
 
 ## 📁 Project Structure
 
+devops-flask-app/
+│
+├── app.py
+├── requirements.txt
+└── Dockerfile
+
+
