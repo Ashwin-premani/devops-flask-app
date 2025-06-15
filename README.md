@@ -30,7 +30,7 @@ devops-flask-app/
 ### Build the image:
 ```bash
 docker build -t flask-app .
-
+```
 You can now access the app locally by navigating to http://localhost:5000 in your browser.
 
 ☁️ AWS EC2 Deployment Instructions
