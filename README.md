@@ -37,9 +37,9 @@ You can now access the app locally by navigating to http://localhost:5000 in you
 🔧 Prerequisites
 -An AWS account with EC2 access
 
--A running EC2 instance (Ubuntu 22.04 LTS, t2.micro)
+    -A running EC2 instance (Ubuntu 22.04 LTS, t2.micro)
 
-Security group configured to allow port 80 (HTTP) traffic
+    -Security group configured to allow port 80 (HTTP) traffic
 
 🖥️ EC2 Setup Instructions
 1. SSH into your EC2 instance
